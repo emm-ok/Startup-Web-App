@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
       }
     ]
   },
-  cacheComponents: true,
+  cacheComponents: false,
   
 
   devIndicators: {

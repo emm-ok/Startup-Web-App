@@ -4,6 +4,7 @@ import { writeClient } from "@/sanity/lib/write";
 import { auth } from "./auth";
 import { parseServerActionResponse } from "./utils";
 import slugify from "slugify";
+import { toast } from "sonner";
 
 export const createPitch = async (state: { error?: string; status?: string }, form: FormData) => {
     const session = await auth();
@@ -44,7 +45,7 @@ export const createPitch = async (state: { error?: string; status?: string }, fo
         });
 
     } catch(error){
-        console.log(error);
+        toast.error(error instanceof Error ? error.message : JSON.stringify(error));
 
         return parseServerActionResponse({ error: JSON.stringify(error), status: 'ERROR'});
     }
