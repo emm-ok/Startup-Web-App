@@ -12,12 +12,13 @@ const Home = async ({ searchParams }: {
 
   const params = { search: query || null};
 
-const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params });
+  const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params });
+
 
   return (
     <>
-      <section className='border-4 border-black p-4 text-xl flex flex-col justify-center items-center gap-4'>
-        <h1 className='p-8 rounded-md font-bold text-2xl text-center'>Your Startup, <hr /> Connect With Entrepreneurs</h1>
+      <section className=' p-4 text-xl flex flex-col justify-center items-center gap-4'>
+        <h1 className='p-8 rounded-md font-bold text-3xl text-center bg-black text-white'>Pitch Your Startup, <br /> Connect With Entrepreneurs</h1>
   
         <p>Submit Ideas, Vote on Pitches, and Get Noticed in Virtual Competitions</p>
   
@@ -31,7 +32,7 @@ const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params });
 
         <ul className='mt-7 card_grid grid md:grid-cols-3 sm:grid-cols-2 gap-5'>
           {posts?.length > 0 ? (
-            posts?.map((post: StartupTypeCard, index: number) => (
+            posts?.map((post: StartupTypeCard) => (
               <StartupCard key={post._id} post={post} />
             ))
           ): (

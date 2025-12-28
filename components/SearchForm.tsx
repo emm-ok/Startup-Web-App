@@ -8,9 +8,10 @@ const SearchForm = ({ query }: { query?: string}) => {
   return (
     <Form action='/' scroll={false} className='search-form flex border-4 border-black rounded-xl p-2'>
         <input 
-            // type="text" 
+            type="text" 
             name='query'
             defaultValue={query}
+            value={query}
             className='search-input rounded-xl px-4 py-2 outline-none text-lg'
             placeholder="Search startups" />
 

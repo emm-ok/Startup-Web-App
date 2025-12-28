@@ -4,6 +4,8 @@ import React from 'react'
 import { signIn, signOut, useSession } from 'next-auth/react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { BadgePlus, LogOut } from 'lucide-react'
+import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar'
 
 const Navbar = () => {
   const { data: session } =  useSession();
@@ -29,17 +31,21 @@ const Navbar = () => {
           {session && session?.user ? (
             <>
               <Link href='/startup/create'>
-                <span>Create</span>
+                <span className='max-sm:hidden'>Create</span>
+                <BadgePlus className='sm:hidden' />
               </Link>
 
               <button className='cursor-pointer' onClick={() => signOut()}>
-                <span>
-                  Logout
-                </span>
+                  <span className='max-sm:hidden'>Logout</span>
+                  <LogOut className='sm:hidden' />
               </button>
 
               <Link href={`/user/${session?.user?.id}`} className='rounded-full p-2 shadow-md '>
-                <span className='text-2xl'>{initials}</span>
+                {/* <span className='text-2xl'>{initials}</span> */}
+                <Avatar className='' >
+                  <AvatarImage src={session?.user?.image || ''} alt={`${initials || ''}`} />
+                  <AvatarFallback>{initials}</AvatarFallback>
+                </Avatar>
               </Link>
             </>
           ): (

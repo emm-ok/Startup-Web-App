@@ -13,3 +13,9 @@ declare module "next-auth/jwt" {
     id?: string;
   }
 }
+
+declare global {
+  interface Window {
+    showSentryFeedback?: () => void;
+  }
+}
