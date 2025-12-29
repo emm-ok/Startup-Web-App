@@ -17,7 +17,7 @@ const page = async ({ id }: { id: string }) => {
 
     if(!post) return notFound();
 
-    const parsedContent = md.render(post?.pitch || '');
+    const parsedContent = md.render(String(post?.pitch ?? ''));
 
   return <>
   <section className="pink_container flex flex-col justify-center m-10 !min-h-[230px]">
