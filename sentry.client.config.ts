@@ -58,7 +58,7 @@ if (typeof window !== 'undefined') {
         window.showSentryFeedback = () => {
           try {
             console.log('Opening feedback dialog...');
-            feedback.openDialog();
+            feedback.attachTo(document.body);
           } catch (error) {
             console.error('Error opening feedback dialog:', error);
           }
