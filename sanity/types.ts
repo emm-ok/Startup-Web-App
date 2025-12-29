@@ -55,6 +55,7 @@ export type Startup = {
   category?: string;
   image?: string;
   pitch?: string;
+  isDeleted?: boolean;
 };
 
 export type Author = {

@@ -5,10 +5,12 @@ import Link from 'next/link'
 import React from 'react'
 import { FaEye } from 'react-icons/fa6'
 import { Skeleton } from './ui/skeleton'
+import { notFound } from 'next/navigation'
 
 export type StartupTypeCard = Omit<Startup, "author"> & { author?: Author };
 
-const StartupCard = ({ post }: { post: StartupTypeCard}) => {
+const StartupCard = ({ post }: { post: StartupTypeCard | null}) => {
+  if(!post) return null;
   const { 
     _createdAt, 
     views, 
@@ -18,7 +20,8 @@ const StartupCard = ({ post }: { post: StartupTypeCard}) => {
     _id, 
     image, 
     description 
-  } = post
+  } = post 
+
   return (
     <li className='startup-card group border rounded-xl p-4 hover:border-red-800 hover:bg-gray-200'>
       <div className='flex items-center justify-between'>

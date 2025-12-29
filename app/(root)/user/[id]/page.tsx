@@ -17,10 +17,10 @@ const Page = async ({ params }: {params: Promise<{ id: string }> }) => {
     if(!user) return notFound();
     return (
     <>
-        <section className="profile_container grid grid-cols-3 md:grid-cols-2 gap-5 m-10">
+        <section className="profile_container grid grid-cols-1 md:grid-cols-2 gap-5 m-10">
             <div className='profile_card shadow-lg h-[500px] rounded border-2 flex flex-col justify-center items-center gap-4 p-10'>
                 <div className='profile_title'>
-                    <h3 className='text-xl font-bold text-white bg-black rounded-full p-4 uppercase text-center line-clamp-1'>
+                    <h3 className='text-md md:text-xl font-medium md:font-bold text-white bg-black rounded-full p-4 uppercase text-center'>
                         {user.name}
                     </h3>
                 </div>

@@ -19,7 +19,8 @@ export const startup = defineType({
         defineField({
             name: 'author',
             type: 'reference',
-            to: {type: 'author'}
+            to: {type: 'author'},
+            validation: Rule => Rule.required(),
         }),
         defineField({
             name: 'views',
@@ -42,6 +43,12 @@ export const startup = defineType({
         defineField({
             name: 'pitch',
             type: 'text',
+        }),
+        defineField({
+            name: 'isDeleted',
+            type: 'boolean',
+            title: 'Deleted',
+            initialValue: false,
         }),
     ],
 })

@@ -10,7 +10,7 @@ const Page = async () => {
   return (
     <>
       <section className="pink_container min-h-[230px] flex justify-center items-center">
-        <h1 className="heading text-3xl font-bold">Submit Your Startup</h1>
+        <h1 className="heading text-3xl font-bold bg-black text-white p-8 rounded-xl">Submit Your Startup</h1>
       </section>
 
       <StartupForm />

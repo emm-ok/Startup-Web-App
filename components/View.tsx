@@ -24,14 +24,14 @@ const View = async ({ id }: { id: string }) => {
   }
 
   return (
-    <div className="view-container w-fit border-2 border-black px-2 rounded-full fixed right-2 top-20">
+    <div className="view-container bg-white w-fit border-2 border-black px-2 rounded-full fixed right-2 top-20">
       <div className="absolute -top-2 -right-2">
         <Ping />
       </div>
 
       <p className="view-text">
         <span className="font-black">
-          {totalViews} {totalViews > 0 ? "views" : "view"}
+          {totalViews} {totalViews > 1 ? "views" : "view"}
         </span>
       </p>
     </div>

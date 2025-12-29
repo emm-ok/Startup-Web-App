@@ -239,6 +239,13 @@
           "type": "string"
         },
         "optional": true
+      },
+      "isDeleted": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "boolean"
+        },
+        "optional": true
       }
     }
   },

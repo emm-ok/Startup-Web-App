@@ -67,7 +67,7 @@ const StartupForm = () => {
         <Input 
           id='title' 
           name='title' 
-          className='startup-form_input rounded-full w-[500px] border-2 outline-none border-black p-6' 
+          className='startup-form_input rounded-full md:w-[500px] border-2 outline-none border-black p-6' 
           required 
           placeholder='Startup Title' 
         />
@@ -80,7 +80,7 @@ const StartupForm = () => {
         <Textarea
           id='description' 
           name='description' 
-          className='startup-form_input rounded-2xl w-[500px] h-[100px] border-2 outline-none border-black px-4' 
+          className='startup-form_input rounded-2xl w-[220px] md:w-[500px] md:h-[100px] border-2 outline-none border-black px-4' 
           required 
           placeholder='Startup Description' 
         />
@@ -93,7 +93,7 @@ const StartupForm = () => {
         <Input
           id='category' 
           name='category' 
-          className='startup-form_input rounded-full w-[500px] border-2 outline-none border-black p-6' 
+          className='startup-form_input rounded-full md:w-[500px] border-2 outline-none border-black p-6' 
           required 
           placeholder='Startup Category (Tech, Health, Education...)' 
         />
@@ -106,7 +106,7 @@ const StartupForm = () => {
         <Input
           id='link' 
           name='link' 
-          className='startup-form_input rounded-full w-[500px] border-2 outline-none border-black p-6' 
+          className='startup-form_input rounded-full md:w-[500px] border-2 outline-none border-black p-6' 
           required 
           placeholder='Startup Image URL ' 
         />
