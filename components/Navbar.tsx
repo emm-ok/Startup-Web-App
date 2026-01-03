@@ -24,7 +24,7 @@ const Navbar = () => {
       <nav className='flex justify-between items-center'>
         <Link href='/'>
           {/* <Image src='logo.png' alt='logo' width={144} height={30}/> */}
-          Yc-Directory
+            Verto
         </Link>
 
         <div className='flex items-center gap-5'>
